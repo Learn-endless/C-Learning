@@ -44,17 +44,17 @@
 //}
 
 
-#include<stdio.h>
-int main()
-{
-	int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
-	sizeof(arr);              //计算整个数组的大小-字节
-	printf("%p\n", arr);      //数组首元素地址
-	printf("%p\n", &arr[0]);  //数组首元素地址
-	printf("%p\n", &arr);     //整个数组的地址
-	printf("%d\n", *arr);     //数组第一个元素
-	return 0;
-}
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
+//	sizeof(arr);              //计算整个数组的大小-字节
+//	printf("%p\n", arr);      //数组首元素地址
+//	printf("%p\n", &arr[0]);  //数组首元素地址
+//	printf("%p\n", &arr);     //整个数组的地址
+//	printf("%d\n", *arr);     //数组第一个元素
+//	return 0;
+//}
 
 
 
@@ -99,3 +99,91 @@ int main()
 //	}
 //	return 0;
 //}
+
+
+//递归实现字符串的逆序(不能使用函数库里的求字符串长度函数)
+//#include<stdio.h>
+//
+//int my_strlen(char* p)
+//{
+//	int count = 0;
+//	while (*p != '\0')
+//	{
+//		count++;
+//		p++;
+//	}
+//	return count;
+//}
+//
+//void handle(char* p)
+//{
+//	int left = 0;
+//	int len = my_strlen(p);
+//	int temp = *(p + left);
+//	*(p + left) = *(p + len - 1);
+//	*(p + len - 1) = '\0';
+//	if (my_strlen(p + 1) >= 2)
+//		handle(p + 1);
+//	*(p + len - 1) = temp;
+//}
+//
+//int main()
+//{
+//	char arr[] = "abcdefg";
+//	handle(arr);
+//	printf("%s\n", arr);
+//}
+
+
+
+//用递归实现，输入1729，输出19（1+7+2+9）
+//#include<stdio.h>
+//
+//int handle(unsigned int n)
+//{
+//	if (n / 10 == 0)
+//		return n;
+//	else
+//		return handle(n / 10) + (n % 10);
+//}
+//
+//int main()
+//{
+//	unsigned int number;
+//	int ret;
+//	scanf("%u", &number);
+//	ret = handle(number);
+//	printf("%d\n", ret);
+//}
+
+
+//递归实现a^b
+//#include<stdio.h>
+//
+//double handle(int a, int b)
+//{
+//	if (b < 0)
+//		return (1.0 / handle(a, -b));
+//	else if (b == 0)
+//		return 1;
+//	else
+//		return a*handle(a, b - 1);
+//}
+//
+//int main()
+//{
+//	int a, b;
+//	scanf("%d %d", &a, &b);
+//	double ret = handle(a, b);
+//	printf("%lf\n", ret);
+//	return 0;
+//}
+
+#include<stdio.h>
+enum { sun, mon, tue, wed, thu };
+int main()
+{
+	enum ge = sun;
+
+	return 0;
+}
