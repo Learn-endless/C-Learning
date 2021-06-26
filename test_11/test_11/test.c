@@ -21,6 +21,7 @@
 //}
 
 
+
 //#include<stdio.h>
 //int main()
 //{
@@ -46,6 +47,7 @@
 //}
 
 
+
 //#include<stdio.h>
 //int main()
 //{
@@ -53,5 +55,83 @@
 //// const char* p= "abcdef";--最好这样写
 //	*p = 'W';       //不能被修改
 //	printf("%s", p);
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	char* p = "abcdef";  //字符常量，首地址放到指针p里面去
+//	printf("%c\n", *p);  
+//	printf("%s\n", p);
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	char arr1[] = "abcdef";
+//	char arr2[] = "abcdef";
+//	char* p1 = arr1;
+//	char* p2 = arr2;
+//	if (p1 == p2)
+//		printf("hehe\n");
+//	else
+//		printf("haha\n");
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	char* p1 = "abcdef"; //字符串常量-不能被改变，所以只存储一份.
+//	char* p2 = "abcdef"; //
+//	if (p1 == p2)
+//		printf("hehe\n");
+//	else
+//		printf("haha\n");
+//	return 0;
+//}
+
+
+
+//指针数组
+//#include<stdio.h>
+//int main()
+//{
+//	int arr1[] = { 1, 2, 3, 4, 5, 6, 7 };
+//	int arr2[] = { 2, 3, 4, 5, 6, 7, 8 };
+//	int arr3[] = { 3, 4, 5, 6, 7, 8, 9 };
+//	int* p[] = { arr1, arr2, arr3 };       //创建一个指针数组，里面存放数组首地址.
+//	int i, j;
+//	for (i = 0; i < 3; i++)
+//	{
+//		for (j = 0; j < 7; j++)
+//		{
+//			printf("%d ", *(p[i] + j));
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+
+//数组指针--指向数组的指针--存放数组的地址
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int(*p)[10] = &arr; //数组指针，指向的数组有10个整型元素。
+//
+//	char* arr1[5];
+//	char* (*p)[5] = &arr1;   //&arr+1:跳过一个数组
+//	                         //arr+1:跳过一个元素
 //	return 0;
 //}
