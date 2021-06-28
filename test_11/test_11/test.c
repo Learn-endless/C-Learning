@@ -21,7 +21,6 @@
 //}
 
 
-
 //#include<stdio.h>
 //int main()
 //{
@@ -47,7 +46,6 @@
 //}
 
 
-
 //#include<stdio.h>
 //int main()
 //{
@@ -59,7 +57,6 @@
 //}
 
 
-
 //#include<stdio.h>
 //int main()
 //{
@@ -68,7 +65,6 @@
 //	printf("%s\n", p);
 //	return 0;
 //}
-
 
 
 //#include<stdio.h>
@@ -86,7 +82,6 @@
 //}
 
 
-
 //#include<stdio.h>
 //int main()
 //{
@@ -98,7 +93,6 @@
 //		printf("haha\n");
 //	return 0;
 //}
-
 
 
 //指针数组
@@ -122,7 +116,6 @@
 //}
 
 
-
 //数组指针--指向数组的指针--存放数组的地址
 //#include<stdio.h>
 //int main()
@@ -135,3 +128,107 @@
 //	                         //arr+1:跳过一个元素
 //	return 0;
 //}
+
+
+//#include<stdio.h>
+////用数组指针实现打印二维数组.
+//void print2(int (*p)[5], int n, int m)
+//{
+//	int i, j;
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = 0; j < m; j++)
+//		{
+//			printf("%d ", *(*(p + i) + j));   //等同于 (*(p+i))[j]
+//		}
+//		printf("\n");
+//	}
+//}
+////用常用的方式实现打印二维数组.
+//void print1(int arr[3][5], int n, int m)
+//{
+//	int i, j;
+//	for (i = 0; i < n; i++)
+//	{
+//		for (j = 0; j < m; j++)
+//			printf("%d ", arr[i][j]);
+//		printf("\n");
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[3][5] = { { 1, 2, 3, 4, 5 }, { 2, 3, 4, 5, 6 }, { 3, 4, 5, 6, 7 } };
+//	print1(arr, 3, 5); 
+//	printf("\n");
+//	print2(arr, 3, 5);
+//	return 0;
+//}
+
+
+//打印一维数组的方法比较
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//	int i = 0;
+//	int* p = arr;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", *(p + i));
+//		printf("%d ", p[i]);
+//		printf("%d ", *(arr + i));
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+
+//打印二维数组的方法比较
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[2][3] = { { 1, 2, 3 }, { 4, 5, 6 } };
+//	int i, j;
+//	for (i = 0; i < 2; i++)
+//	{
+//		for (j = 0; j < 3; j++)
+//		{
+//			printf("%d ", *(*(arr + i) + j));
+//			printf("%d ", *(arr[i] + j));
+//			printf("%d ", (*(arr + i))[j]);
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+//尝试分析下面的代码
+// int arr[5];          arr是一个数组，有5个元素，每个元素类型为int
+// int* arr[10];        arr是一个数组，有10个元素，每个元素的类型为int*
+// int (*arr)[10];      arr是一个指针，指向一个数组，数组有10个元素，每个元素的类型为int
+// int (*arr[10])[5];   arr是一个数组，有10个元素，每个元素是一个数组指针，指向的数组元素有5个，类型为int
+
+
+
+//一维数组传参
+//#include<stdio.h>
+//void test(int arr[]) //void test(int arr[10])   void test(int* arr)
+//{
+//	;
+//}
+//void test1(int* arr[10])//void test1(int* arr[])   void test1(int** arr)
+//{
+//	;
+//}
+//int main()
+//{
+//	int arr[10];
+//	int *arr1[10];
+//	test(arr);
+//	test1(arr1);
+//	return 0;
+//}
+
