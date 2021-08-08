@@ -232,3 +232,12 @@
 //	return 0;
 //}
 
+
+
+#include<stdio.h>
+int main()
+{
+	char* p = "abcdef";
+	printf("%c\n", *p);
+	return 0;
+}
